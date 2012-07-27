@@ -1,0 +1,204 @@
+body {
+	font-size:75%;
+	color:#000;
+	font-family: Helvetica, Cambria, Arial, sans-serif; 
+	background: #fff;
+}
+
+#header {
+	margin-left: 130px;
+	background-color: #efefef;
+	padding-left: 5px;
+}
+
+#banner {
+	width: 100%;
+	margin: 0px auto;
+	padding-top: 10px;
+	height: 10px;
+	background: #fff url("../images/lines.png") repeat;
+	border-bottom: 1px solid #333;
+}
+
+#wrapper {
+	// background: #fff url("../images/logo-v6b.gif") top center no-repeat;
+	background-color: #fff;
+	margin: 0px auto 10px auto;
+	padding-top: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 1000px;
+	overflow: hidden; /* This hides the excess padding in non-IE browsers */
+}
+#wrapper {
+	float: left;
+	float/**/: none;
+}
+/* easy clearing */
+#wrapper:after {
+	content: ''; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+}
+#wrapper {
+	display: inline-block;
+}
+/*\*/
+#wrapper {
+	display: block;
+}
+
+#footer {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: smaller;
+	padding-top: 10px;
+	clear: both;
+	}
+	
+#blog {
+	float: left;
+	width: 340px;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+	
+#community {
+	float: left;
+	margin-left: 20px;
+	margin-top: 10px;
+	width: 500px; /* was 480 , 300 */
+}
+	
+#sidebar {
+	background: #fff url("../images/logo-v7.gif") top center no-repeat;
+	padding-top: 180px;
+	float: left;
+	width: 120px;
+}
+
+#community, #blog, #footer {
+	font-family: Helvetica, Cambria, Arial, sans-serif;
+	font-size: 16px;
+}
+
+#menu {
+	font-family: Helvetica, Cambria, Arial, sans-serif;
+	font-size: 12px;
+}
+
+/* ######### */
+
+
+.post {
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.rank {
+	width: 20px;
+	float: left;
+	margin-top: 18px;
+	text-align: center;
+	color: #000;
+	font-weight: bold;
+}
+
+.voting {
+	width: 20px;
+	float: left;
+	margin-top: 0px;
+	text-align: center;
+	font-weight: bold;
+	color: #ccc;
+}
+
+.postcontent {
+	margin-left: 55px;
+}
+
+.meta {
+	margin-bottom: 0;
+	color: #888;
+	font-size: smaller;
+}
+
+.comments {
+	margin-top: 0px;
+	margin-left: 0px;
+	padding: 0 0 0 15px;
+	background: #fff url("../images/comment.gif") center left no-repeat;
+}
+
+.comments a:link {
+	color: #888;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+
+.byline {
+	margin-bottom: 5px;
+	font-size: smaller;
+	color: #777;
+}
+
+/* typography */
+
+h1 {
+	font-size: 2em!important;
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+h2 {
+	font-size:2em;
+	margin-bottom:0.75em;
+	font-weight: bold!important;
+	}
+	
+h3 {
+	font-size:1.5em;
+	line-height:1;
+	margin-bottom:1em;
+	}
+
+h5 {
+	font-size: 0.9em;
+	color: #f00;
+}
+
+.date {
+	font-size: 0.8em;
+	background: #f00;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px;
+}
+
+h1.heading {
+	color:#000000;
+	font-family:georgia,times,"times new roman",serif;
+	font-size:40px;
+	line-height:45px;
+	margin:0;
+	font-weight: bold;
+	border-bottom: 1px solid #777;
+}	
+
+
+/* ############# */
+
+/* reset.css */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+body {line-height:1.5;}
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;}
+table, td, th {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:"";}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+
+/* ########## */

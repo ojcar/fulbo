@@ -1,0 +1,8 @@
+<% form_for(:entry, :url => group_entries_path) do |f| %>
+  <%= hidden_field_tag "entry_type", @entry[:type] %>
+  <p>Titulo<br/><%= f.text_field :title, :size => 40 -%></p>
+  <p>Quote<br /><%= f.text_area :body, :rows => 10, :cols => 60 -%></p>
+  <p>Source<br /><%= f.text_field :source, :size => 40 -%></p>
+   <p>Etiquetas (separadas con una coma ','): <%= f.text_field :tag_list %></p>
+  <p><%= f.submit "Create" %></p>
+<% end %>

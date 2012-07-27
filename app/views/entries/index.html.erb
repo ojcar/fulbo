@@ -1,0 +1,12 @@
+<h1>Listing entries</h1>
+
+<% for entry in @entries %>
+<%= entry.title %> - <%= link_to 'Show', group_entry_path(entry.group.name, entry) %> - <%= entry.created_at %> -
+
+
+<br />
+<% end %>
+ 
+<p>
+<%= will_paginate @entries %>
+</p>

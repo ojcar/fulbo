@@ -1,0 +1,9 @@
+<% for blogentry in @blogentries %>
+		<div class="post">
+			<h5><span class="date"><%= blogentry.created_at %></span></h5>
+			<h2><%= blogentry.title %></h2>
+			<h5 class="byline">por <%= link_to blogentry.user.login, hinchas_url(blogentry.user.login) %></h5>
+			<p><%= blogentry.body %></p>
+			<h5 class="comments"><%= link_to 'Comentarios', group_entry_path(blogentry.group.name, blogentry) %></h5>
+		</div>
+<% end %>

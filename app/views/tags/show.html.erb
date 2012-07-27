@@ -1,0 +1,6 @@
+<h1>Entries tagged with: <%= params[:id] %></h1>
+<ul>
+<% for entry in @entries %>
+	<li><%= link_to entry.title, group_entry_path(entry.group.name, entry) %></li>
+<% end %>
+</ul>

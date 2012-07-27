@@ -1,0 +1,22 @@
+<div id="maintitle">
+<h1><%= link_to @group.name, :controller => 'groups', :action =>
+  'show', :name => @group.name %> (<%= @group.country.name %>)</h1>
+
+</div>
+
+<% if logged_in? %>
+	<% if current_user.groups.include?(@group) %>
+		Tu eres hincha.
+	<% else %>
+		<% unless current_user.countries.include?(@group.country) %>
+			<%= link_to 'Unete a este equipo', :controller => 'groups', :action => 'join', :id => @group.id %>
+		<% end %>
+	<% end %>
+<% end %>
+
+
+<div id="block_7">
+<% for user in @users %>
+  <p><%= user.login %></p>
+<% end %>
+</div>

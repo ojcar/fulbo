@@ -1,0 +1,19 @@
+<%= render :partial => 'groups/groupheader' %>
+
+
+<div id="block_7">
+	<% if @group.name == "fulbo" %>
+		<%= render :partial => "entries/entryblog" %>
+		<p><%= will_paginate(@blogentries) %></p>
+	<% else %>
+		<%= render :partial => "entries/entrycommon" %>
+		<p><%= will_paginate(@entries) %></p>
+	<% end %>
+</div>
+
+
+
+
+
+ 
+

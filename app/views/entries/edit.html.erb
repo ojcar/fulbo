@@ -1,0 +1,14 @@
+<h1>New entry</h1>
+<%= error_messages_for :entry %>
+<% form_for(:entry, :url => group_entries_path) do |f| %>
+  <p>Titulo<br/><%= f.text_field :title, :size => 40 -%></p>
+  <p><%= f.text_area :body, :rows => 10, :cols => 60 -%></p>
+  <p><%= f.submit "Create" %></p>
+<% end %><% form_for(@entry) do |f| %>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @entry %> |
+<%= link_to 'Back', entries_path %>

@@ -1,0 +1,85 @@
+8
+
+dir
+7
+svn+nerduchisssh://209.20.88.98/home/ojcar/repository/fulbo/fulbo/trunk/vendor/plugins/acts_as_flaggable
+svn+nerduchisssh://209.20.88.98/home/ojcar/repository/fulbo
+
+
+
+2008-11-08T21:06:12.524866Z
+6
+ojcar
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+dcb9e715-48a6-4515-8e54-d3755b96bacf
+
+test
+dir
+
+tasks
+dir
+
+init.rb
+file
+
+
+
+
+2009-03-26T01:40:28.000000Z
+f01aa4a2c2be4b4bbfdb66c3f8949e03
+2008-09-09T04:23:04.221913Z
+1
+ojcar
+
+lib
+dir
+
+install.rb
+file
+
+
+
+
+2009-03-26T01:40:28.000000Z
+cbe738c10eba4ae2da8c6859c9723e44
+2008-09-09T04:23:04.221913Z
+1
+ojcar
+
+MIT-LICENSE
+file
+
+
+
+
+2009-03-26T01:40:28.000000Z
+3ea1b94d199b85cbc4970271ba0ae1c7
+2008-09-09T04:23:04.221913Z
+1
+ojcar
+
+README
+file
+
+
+
+
+2009-03-26T01:40:28.000000Z
+72edf3c008c479a5baa060b0f2bea81d
+2008-09-09T04:23:04.221913Z
+1
+ojcar
+

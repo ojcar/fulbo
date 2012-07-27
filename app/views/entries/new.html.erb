@@ -1,0 +1,9 @@
+<h1>New entry</h1>
+<%= link_to_remote "New Post", { :update => "_target", :url => { :controller => "entries", :action => "newtexto" }, :method => :get }, :href => url_for(:action => "new", :entry_type => "Texto")%>
+<%= link_to_remote "New Link", { :update => "_target", :url => { :controller => "entries", :action => "newlink" }, :method => :get }, :href => url_for(:action => "new", :entry_type => "Link")%>
+<%= link_to_remote "New Quote",{ :update => "_target", :url => { :controller => "entries", :action => "newquote" }, :method => :get },  :href => url_for(:action => "new", :entry_type => "Quote")%>
+<%= link_to_remote "New Photo",{ :update => "_target", :url => { :controller => "entries", :action => "newphoto" }, :method => :get },  :href => url_for(:action => "new", :entry_type => "Photo")%>
+<div id="_target">
+
+</div>
+

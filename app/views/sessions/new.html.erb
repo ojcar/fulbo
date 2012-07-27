@@ -1,0 +1,13 @@
+<% form_tag sessions_path do -%>
+<p><label for="login">Login</label><br/>
+<%= text_field_tag 'login' %></p>
+
+<p><label for="password">Contrase&ntilde;a</label><br/>
+<%= password_field_tag 'password' %></p>
+<p><%= link_to 'forgot password?', forgot_url %>
+
+<p><label for="remember_me">Recordar mis datos?</label>
+<%= check_box_tag 'remember_me' %></p>
+
+<p><%= submit_tag 'Log in' %></p>
+<% end -%>

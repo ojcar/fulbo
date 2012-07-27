@@ -1,0 +1,21 @@
+<% for entry in @entries %>
+		<div class="post">
+			<div class="rank">
+				<%= render(:partial => "entries/votecount", :locals => {:voteable => entry}) %>
+			</div>
+			<% if logged_in? %>
+				<div class="voting"><%= render(:partial => "entries/vote", :locals => {:voteable => entry}) %></div>
+			<% end %>
+			
+			<div class="postcontent">	
+				<h2><%= entry.title %></h2>
+				<p class="meta">
+					(<%= link_to entry.group.name, group_path(@group_name) %>)
+					por <%= link_to entry.user.login, hinchas_url(entry.user.login) %>
+					&nbsp; &middot; &nbsp; <span class="comments"><%= link_to 'Comentarios', group_entry_path(entry.group.name, entry) %></span>
+				</p>
+				
+  				<p><%= entry.body %></p>
+			</div>
+		</div>
+	<% end %>

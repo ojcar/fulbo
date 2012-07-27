@@ -1,0 +1,4 @@
+An link/photo/text sharing application.
+Users can submit and vote on stories.
+Each user must belong to a group, and can only comment on stories that belong to the same group. 
+It was thought out as a sports themed site, where a user is a fan of a specific team (group).

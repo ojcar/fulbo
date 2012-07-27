@@ -1,0 +1,31 @@
+xml.instruct!
+
+xml.rss "version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/" do
+  xml.channel do
+    
+    xml.title  "Fulbo"
+    xml.link  "fulbo.net"
+    xml.pubDate CGI.rfc1123_date @entries.first.created_at if @entries.any?
+    xml.description "Futbol del bueno."
+    
+    @entries.each do |entry|
+      xml.item do
+        xml.title  entry.title
+        xml.link  group_entry_url(entry.group.name, entry)
+        case entry.type
+          when "Texto"
+            xml.description entry.body
+          when "Link"
+            xml.description entry.url
+          when "Quote"
+            xml.description entry.body
+        end
+        xml.pubDate CGI.rfc1123_date entry.created_at
+        xml.guid group_entry_url(entry.group.name, entry)
+        if entry.user_id?
+          xml.author entry.user.login
+        end
+      end
+    end
+  end
+end

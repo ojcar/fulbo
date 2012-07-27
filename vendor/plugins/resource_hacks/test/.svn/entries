@@ -1,0 +1,52 @@
+8
+
+dir
+7
+svn+nerduchisssh://209.20.88.98/home/ojcar/repository/fulbo/fulbo/trunk/vendor/plugins/resource_hacks/test
+svn+nerduchisssh://209.20.88.98/home/ojcar/repository/fulbo
+
+
+
+2008-09-09T04:23:04.221913Z
+1
+ojcar
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+dcb9e715-48a6-4515-8e54-d3755b96bacf
+
+test_helper.rb
+file
+
+
+
+
+2009-03-26T01:40:28.000000Z
+8fdde0a803dfb996b9579d15c8ad3da0
+2008-09-09T04:23:04.221913Z
+1
+ojcar
+
+resource_hacks_test.rb
+file
+
+
+
+
+2009-03-26T01:40:28.000000Z
+49b25258c044a2ac7b2816c7e3ab6a13
+2008-09-09T04:23:04.221913Z
+1
+ojcar
+

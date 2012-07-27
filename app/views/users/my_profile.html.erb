@@ -1,0 +1,28 @@
+<h2><%= current_user.login %></h2>
+<p>Joined: <%= current_user.created_at %></p>
+
+<h2>User Groups:</h2>
+<ul>
+<% for usergroups in current_user.groups %>
+  <li><%= link_to usergroups.name, :controller => 'groups', :action => 'show', :name => usergroups.name %> (<%= usergroups.country.name %>) <%= link_to 'baja', :controller => 'groups', :action => 'baja', :id => usergroups.id %></li>
+<% end %>
+</ul>
+
+<hr>
+
+<h2>All Groups</h2>
+<% for country in @countries %>
+	<h3><%= country.name %></h3>
+	<ul>
+	<% for groups in @groups %>
+		<% if groups.country.name == country.name %>
+			<li><%= link_to groups.name, :controller => 'groups', :action => 'show', :name => groups.name %> - <%= link_to 'alta', :controller => 'groups', :action => 'join', :id => groups.id %></li>
+		<% end %>
+	<% end %>
+	</ul>
+<% end %>
+
+
+
+
+

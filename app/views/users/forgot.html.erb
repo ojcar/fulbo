@@ -1,0 +1,8 @@
+<%= error_messages_for :user %>
+<% form_for :user do |f| -%>
+	<p>Request link to reset password</p>
+	<p>Email:</p>
+	<p><%= f.text_field :email %></p>
+	<p><%= submit_tag 'Submit' %></p>
+<% end -%>
+

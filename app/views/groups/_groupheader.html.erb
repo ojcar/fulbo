@@ -1,0 +1,22 @@
+<div id="maintitle">
+
+<h1><%= link_to @group.name, group_path(@group_name) %> (<%= @group.country.name %>)</h1>
+<%= link_to 'Fanas', fanas_url(@group.name) %>
+
+
+<% if logged_in? %>
+	<% if current_user.groups.include?(@group) %>
+		post: <%= link_to "texto", :controller => group_entries_path(@group.name), :action => 'newtexto' %>
+		<%= link_to "link", :controller => group_entries_path(@group.name), :action => 'newlink' %>
+		<%= link_to "photo", :controller => group_entries_path(@group.name), :action => 'newphoto' %>
+		<%= link_to "quote", :controller => group_entries_path(@group.name), :action => 'newquote' %>
+	<% else %>
+
+<% unless current_user.countries.include?(@group.country) %>
+   <%= link_to 'Unete a este equipo', :controller => 'groups', :action => 'join', :id => @group.id %>
+<% end %>
+
+	<% end %>
+<% end %>
+
+</div>

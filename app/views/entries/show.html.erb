@@ -1,0 +1,56 @@
+<div id="maintitle">
+<h2><%= @entry.group.name %></h2>
+<h1><%= @entry.title %></h1>
+<h3>
+<% unless @entry.group.name == "fulbo" %>
+<%= render(:partial => "votecount", :locals => {:voteable => @entry}) %>
+<% if logged_in? %>
+	<% if @entry.voted_by_user?(current_user) %>
+		<% if @entry.what_vote?(current_user) %>
+			[you liked this]
+		<% else %>
+			[you didn't like this]
+		<% end %>
+	<% else %>
+		<%= render(:partial => "vote", :locals => {:voteable => @entry}) %>
+	<% end  %>
+<% else %>	
+	<p>if you were logged in you could vote.</p>
+<% end %>
+ / 
+<% end %>
+
+posted by <%= link_to @entry.user.login, "/" %>
+</h3>
+</div>
+
+
+<div id="block_7">
+	<% if @entry.type == "Photo" %>
+		<%=	image_tag(@entry.public_filename()) %>
+	<% end %>
+	
+	<p><%= @entry.body %></p>
+	
+	<p>
+	<% for tag in @entry.tag_list %>
+	<%= link_to tag, tag_path(tag) %>
+	<% end %>
+	</p>
+
+
+	<% unless @entry.comments.empty? %>
+		<%= render :partial => "/comments/comment", :collection => @entry.comments %>
+	<% end %>
+
+
+	<% form_for(:comment, :url => group_entry_comments_path(@entry.group_id, @entry.id)) do |f| %>
+	<fieldset>
+  		<legend>Comentar el tema</legend>
+  		<%= f.text_area  :body, :rows => 3 %>
+  		<p><%= f.submit "Comentar" %></p>
+	</fieldset>
+	<% end %>
+</div>
+
+<%= render :partial => "layouts/sidebar" %>

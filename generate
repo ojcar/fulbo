@@ -1,0 +1,19 @@
+Script started on Sun Sep 14 13:09:10 2008
+minicastle:~/fulbo/trunk ojcar$ script/generate micra   ga ration add_entries_counts_to_ user -c
+
+^[[A^[[A      exists  db/migrate
+      create  db/migrate/019_add_entries_counts_to_user.rb
+A         /Users/ojcar/fulbo/trunk/db/migrate/019_add_entries_counts_to_user.rb
+minicastle:~/fulbo/trunk ojcar$ 
+minicastle:~/fulbo/trunk ojcar$ script/generate migration add_entries_counts_to_uuser -c[Atle:~/fulbo/trunk ojcar$ sudo mysqld_safe[K
+[K[Aminicastle:~/fulbo/trunk ojcar$ sudo mysqld_safe                rake db:migrate
+(in /Users/ojcar/fulbo/trunk)
+== 19 AddEntriesCountsToUser: migrating =======================================
+-- add_column(:users, :entries_count, :integer, {:default=>0, :null=>false})
+   -> 0.1425s
+== 19 AddEntriesCountsToUser: migrated (0.1476s) ==============================
+
+minicastle:~/fulbo/trunk ojcar$ exit
+exit
+
+Script done on Sun Sep 14 13:15:05 2008

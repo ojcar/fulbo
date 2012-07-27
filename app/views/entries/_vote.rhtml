@@ -1,0 +1,5 @@
+<span class="votar">
+  <%= link_to_remote "(a favor)", :update=>"vote", :url => { :controller => "entries", :action=>"vote",  :id=>voteable.id, :vote=>"for"} %>   
+  /
+  <%= link_to_remote "(en contra)", :update=>"vote", :url => { :controller => "entries", :action=>"vote", :id=>voteable.id, :vote=>"against"} %>  
+</span>

@@ -1,0 +1,10 @@
+<%= error_messages_for :user %>
+<% form_for :user do |f| -%>
+<p>Pick a new password for <%= @user.email %></p>
+<p>Password:</p>
+<p><%= f.password_field :password %><p>
+<p>Confirm Password:</p>
+<p><%= f.password_field :password_confirmation %></p>
+<p><%= submit_tag 'Reset' %></p>
+<% end -%>
+
